@@ -9,6 +9,6 @@ In the text file, there are four column:
 pix_num : sequence number of pixel,different pixel size (resolution) has different total pixel.
 ra/l: right ascension/galactic longitude.
 dec/b: declination/galactic latitude.
-mass/SFR: total mass/SFR within this pixel (In logarithmic form).
+Mass/SFR: total mass/SFR within this pixel (In logarithmic form).
 
 
