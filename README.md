@@ -4,10 +4,10 @@ Both the Mass and SFR folders contain data based on equatorial and galactic coor
 MASS/SFR_D30_1.83deg_gal.txt
 D30: luminosity distance: 30Mpc;
 1.83deg: angular resolution;
-gal: galactic coordinates (no gal means equatorial coordinates)
+gal: galaxies in Galactic coordinates (no gal means equatorial coordinates).
 
 In the text file, there are four column: 
-pix_num : sequence number of pixel,different pixel size (resolution) has different total pixel.
+pix_num : sequence number of pixel, different pixel size (angular resolution) has different total number pixel.
 ra/l: right ascension/galactic longitude.
 dec/b: declination/galactic latitude.
 Mass/SFR: total mass/SFR within this pixel (logarithmic form).
