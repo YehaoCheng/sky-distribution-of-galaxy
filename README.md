@@ -7,7 +7,7 @@ D30: luminosity distance: 30Mpc.
 
 1.83deg: angular resolution of grid.
 
-In the text file, there are four column: 
+In the text file, there are four columns: 
 
 1.grid_num : sequence number of gird, different angular resolution has different total number pixel.
 
