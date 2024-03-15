@@ -1,16 +1,13 @@
-The first folders are named in angular resolutions. We chose the proper angular resolution according to the FoV of telescope.
-Both the Mass and SFR folders contain data based on equatorial and galactic coordinates. Because there are difference for the division of celestrial sphere based on the equatorial and galactic coordinates but the difference is small and don't affect the main results.
+The first folders are named in angular resolutions of grids. We could chose the proper angular resolution according to the FoV of telescope.
+Both the Mass and SFR folders contain data based on equatorial coordinate. 
 
-MASS/SFR_D30_1.83deg_gal.txt
+MASS/SFR_D30_1.83deg.txt
 D30: luminosity distance: 30Mpc.
-1.83deg: angular resolution.
-gal: galaxies in Galactic coordinates (no gal means equatorial coordinates).
+1.83deg: angular resolution of grid.
 
 In the text file, there are four column: 
-pix_num : sequence number of pixel, different pixel size (angular resolution) has different total number pixel.
-ra/l: right ascension/galactic longitude.
-dec/b: declination/galactic latitude.
-Mass/SFR: total mass/SFR within this pixel (logarithmic form).
-
-Note: ra/l and dec/b represents the coordinates at the center of each pixel.
+1.grid_num : sequence number of gird, different angular resolution has different total number pixel.
+2.ra: right ascension of central coordinate of grid.
+3.dec: declination of central coodinate of grid.
+4.Mass/SFR: total mass/SFR within this grid (logarithmic form).
 
