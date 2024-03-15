@@ -2,7 +2,9 @@ The first folders are named in angular resolutions of grids. We could chose the 
 Both the Mass and SFR folders contain data based on equatorial coordinate. 
 
 MASS/SFR_D30_1.83deg.txt
+
 D30: luminosity distance: 30Mpc.
+
 1.83deg: angular resolution of grid.
 
 In the text file, there are four column: 
