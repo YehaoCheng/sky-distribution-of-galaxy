@@ -16,4 +16,4 @@ In the text file, there are four columns:
 
 4.Mass/SFR: total mass/SFR within this grid (logarithmic form).
 
-note: the value in grid be 1e-10 if no galaxy located at the grid.
+Note: the value in grid be 1e-10 if no galaxy located at the grid.
