@@ -1,35 +1,37 @@
-The first folders are named in angular resolutions of grids. We could chose the proper angular resolution according to the FoV of telescope.
-Both the MASS and SFR folders contain data and figures of sky distribution based on equatorial coordinate. The format of data is the numpy binary format.
+The top-level folders are named according to the angular resolution of the grids. You can choose the appropriate angular resolution based on the telescope's Field of View. Both the MASS and SFR folders contain data and figures of the sky distribution based on equatorial coordinates. The data is stored in the NumPy binary format (.npz).
 
-MASS/SFR_D30_1.83deg.npz
+Filename example: MASS/SFR_D30_1.83deg.npz
 
-D30: luminosity distance: 30Mpc.
-1.83deg: angular resolution of grid.
+D30: Luminosity distance of 30 Mpc.
 
-We provide a piece of code for reading this format file below:
+1.83deg: Angular resolution of the grid.
+
+Below is a code snippet to read this file format:
+
 
 #------------------------------------------------------
 
 
 import numpy as np
 
+
 loaded_data = np.load("MASS_D30_1.83deg.npz")
 
 
-npix = loaded_data['npix']    # sequence number of gird, different angular resolution has different total number pixel.
+npix = loaded_data['npix'] # Grid sequence number. Note: Different resolutions have different total pixel counts. 
 
 
-ra = loaded_data['ra']        # right ascension of central coordinate of grid.
+ra = loaded_data['ra'] # Right Ascension of the grid's central coordinate. 
 
 
-dec = loaded_data['dec']      # declination of central coodinate of grid.
+dec = loaded_data['dec'] # Declination of the grid's central coordinate. 
 
 
-value = loaded_data['value']  # total mass/SFR within this grid (logarithmic form).
+value = loaded_data['value'] # Total MASS/SFR within this grid (logarithmic scale). 
 
 
 #------------------------------------------------------
 
 
-Note: the value in grid be 1e-10 if no galaxy located at the grid.
+**Note:** The value in the grid is set to `1e-10` if no galaxy is located within it.
 
