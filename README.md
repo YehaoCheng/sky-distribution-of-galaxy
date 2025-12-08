@@ -1,5 +1,5 @@
 The first folders are named in angular resolutions of grids. We could chose the proper angular resolution according to the FoV of telescope.
-Both the MASS and SFR folders contain data based on equatorial coordinate. 
+Both the MASS and SFR folders contain data and figures of sky distribution based on equatorial coordinate. The format of data is the numpy binary format.
 
 MASS/SFR_D30_1.83deg.txt
 
