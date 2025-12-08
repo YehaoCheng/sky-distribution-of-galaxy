@@ -9,6 +9,8 @@ D30: luminosity distance: 30Mpc.
 We provide a piece of code for reading this format file below:
 
 #------------------------------------------------------
+
+
 import numpy as np
 
 loaded_data = np.load("MASS_D30_1.83deg.npz")
@@ -17,6 +19,8 @@ npix = loaded_data['npix']    # sequence number of gird, different angular resol
 ra = loaded_data['ra']        # right ascension of central coordinate of grid.
 dec = loaded_data['dec']      # declination of central coodinate of grid.
 value = loaded_data['value']  # total mass/SFR within this grid (logarithmic form).
+
+
 #------------------------------------------------------
 
 
