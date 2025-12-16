@@ -1,10 +1,10 @@
-The top-level folders are named according to the angular resolution of the grids. You can choose the appropriate angular resolution based on the telescope's Field of View. Both the MASS and SFR folders contain data and figures of the sky distribution based on equatorial coordinates. The data is stored in the NumPy binary format (-`.npz`).
+The top-level folders are named according to the angular resolution of the grids. You can choose the appropriate angular resolution based on the telescope's Field of View. Both the MASS and SFR folders contain data and figures of the sky distribution based on equatorial coordinates. The data is stored in the NumPy binary format (`.npz`).
 
-Filename example: -`MASS/SFR_D30_1.83deg.npz`
+Filename example: `MASS/SFR_D30_1.83deg.npz`
 
--`D30`: Luminosity distance of 30 Mpc.
+- `D30`: Luminosity distance of 30 Mpc.
 
--`1.83deg`: Angular resolution of the grid.
+- `1.83deg`: Angular resolution of the grid.
 
 Below is a code snippet to read this file format:
 
