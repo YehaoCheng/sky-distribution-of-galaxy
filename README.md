@@ -14,14 +14,16 @@ Below is a code snippet to read this file format:
 ```python
 import numpy as np
 
-
 loaded_data = np.load("Your_path/MASS_D30_1.83deg.npz")
 # Grid sequence number. Note: Different resolutions have different total pixel counts.
 npix = loaded_data['npix']
+
 # Right Ascension of the grid's central coordinate.
-ra = loaded_data['ra'] 
+ra = loaded_data['ra']
+
 # Declination of the grid's central coordinate. 
-dec = loaded_data['dec'] 
+dec = loaded_data['dec']
+
 # Total MASS/SFR within this grid (logarithmic scale). 
 value = loaded_data['value']
 ```
