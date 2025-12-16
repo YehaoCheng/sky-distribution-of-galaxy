@@ -15,6 +15,7 @@ Below is a code snippet to read this file format:
 import numpy as np
 
 loaded_data = np.load("Your_path/MASS_D30_1.83deg.npz")
+
 # Grid sequence number. Note: Different resolutions have different total pixel counts.
 npix = loaded_data['npix']
 
