@@ -11,24 +11,20 @@ Below is a code snippet to read this file format:
 
 #------------------------------------------------------
 
-
+```python
 import numpy as np
 
 
 loaded_data = np.load("MASS_D30_1.83deg.npz")
 
-
 npix = loaded_data['npix'] # Grid sequence number. Note: Different resolutions have different total pixel counts. 
-
 
 ra = loaded_data['ra'] # Right Ascension of the grid's central coordinate. 
 
-
 dec = loaded_data['dec'] # Declination of the grid's central coordinate. 
 
-
 value = loaded_data['value'] # Total MASS/SFR within this grid (logarithmic scale). 
-
+```
 
 #------------------------------------------------------
 
