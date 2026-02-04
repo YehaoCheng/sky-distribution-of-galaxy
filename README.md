@@ -26,7 +26,7 @@ ra = loaded_data['ra']
 dec = loaded_data['dec']
 
 # Total MASS/SFR within this grid (logarithmic scale). 
-value = loaded_data['value']
+value = loaded_data['m']
 ```
 
 
