@@ -9,6 +9,7 @@ In this project, we utilize the comprehensive galaxy catalog from [Tranin et al.
       - data / figures
       
 The data in each "data" folder represents the sky distribution of stellar mass and SFR. The corresponding sky distribution maps are located in the "figures" folder.
+**Note:** The value in the grid is set to `1e-10` if no galaxy is located within it.
 
   
 
