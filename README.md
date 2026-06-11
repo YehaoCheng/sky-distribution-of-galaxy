@@ -40,9 +40,9 @@ value = loaded_data['m']
 
 ### References
 
-<a id="ref-tranin2026"></a>**[1]** Tranin., et al. (2026). *A catalog to unite them all: REGALADE, a revised galaxy  compilation for the advanced detector era*. [	https://doi.org/10.1051/0004-6361/202556896](	https://doi.org/10.1051/0004-6361/202556896).
+<a id="ref-tranin2026"></a>**[1]** Tranin et al., (2026). *A catalog to unite them all: REGALADE, a revised galaxy  compilation for the advanced detector era*. [	https://doi.org/10.1051/0004-6361/202556896](	https://doi.org/10.1051/0004-6361/202556896).
 
-<a id="ref-zeraatgari2024"></a>**[2]** Zeraatgari et al. (2024). *Exploring galactic properties with machine learning Predicting star formation, stellar mass, and metallicity from photometric data*. [https://doi.org/10.1051/0004-6361/202348714](https://doi.org/10.1051/0004-6361/202348714)
+<a id="ref-zeraatgari2024"></a>**[2]** Zeraatgari et al., (2024). *Exploring galactic properties with machine learning Predicting star formation, stellar mass, and metallicity from photometric data*. [https://doi.org/10.1051/0004-6361/202348714](https://doi.org/10.1051/0004-6361/202348714)
 
 
 
