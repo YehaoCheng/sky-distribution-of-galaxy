@@ -1,12 +1,12 @@
-# REGALADE Galaxy Mass & SFR Pipeline
+# Stellar Mass & SFR Pipeline
 A complete open-source Python pipeline for calculating integrated stellar mass and star formation rate (SFR) HEALPix maps, plus machine learning-based SFR prediction and visualization tools, built for the REGALADE galaxy survey.
 
 ---
 
 ## Overview
 This repository contains all scripts to process galaxy catalog data, including:
-1.  **Batch HEALPix map calculation**: All-sky maps of total stellar mass (MASS) and SFR, across multiple resolutions and distance thresholds
-2.  **Machine learning SFR prediction**: A CatBoost regression pipeline to predict `log(SFR)` from galaxy photometry and redshift
+1.  **Batch HEALPix map calculation**: All-sky maps of total stellar mass (MASS) and SFR, across multiple resolutions and luminosity distance thresholds
+2.  **Machine learning SFR prediction**: A CatBoost regression pipeline to predict `log(SFR)` from galaxy photometry, redshift and stellar mass
 3.  **Publication-ready visualization**: Tools to plot Mollweide-projection sky maps of derived quantities
 
 ---
