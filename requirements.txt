@@ -4,3 +4,4 @@ scipy>=1.7
 matplotlib>=3.4
 scikit-learn>=1.0
 catboost>=1.0
+healpy>=1.15
