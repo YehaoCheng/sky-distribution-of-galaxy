@@ -1,6 +1,7 @@
-## Project: A Roadmap for Transient Hunters: Mapping Stellar Mass and Star Formation Rate Anisotropies in the Local Universe
+## A Roadmap for Transient Hunters: Mapping Stellar Mass and Star Formation Rate Anisotropies in the Local Universe
 
-### Description: In this project, we utilize the comprehensive galaxy catalog from [Tranin et al. (2026)](#ref-tranin2026) (REGALADE) to map the sky distributions of stellar mass and star formation rate (SFR) across various luminosity distance thresholds and angular grid resolutions. Following the methodology of [Zeraatgari et al. (2024)](#ref-zeraatgari2024), we employ a machine learning framework to predict the SFRs for galaxies lacking pre-existing measurements, enabling a complete and high-resolution mapping on the celestial sphere.
+### Description: 
+In this project, we utilize the comprehensive galaxy catalog from [Tranin et al. (2026)](#ref-tranin2026) (REGALADE) to map the sky distributions of stellar mass and star formation rate (SFR) across various luminosity distance thresholds and angular grid resolutions. Following the methodology of [Zeraatgari et al. (2024)](#ref-zeraatgari2024), we employ a machine learning framework to predict the SFRs for galaxies lacking pre-existing measurements, enabling a complete and high-resolution mapping on the celestial sphere.
 
 ### Usage: 
 In the document, we have provided sky distribution maps and corresponding data of stellar mass and SFR for multiple angular resolutions at each luminosity distance. The top-level folders are named according to the angular resolution of the grids. We can choose the appropriate angular resolution based on the telescope's Field of View. Both the MASS and SFR folders contain data and figures of the sky distribution based on equatorial coordinates. The data is stored in the NumPy binary format (`.npz`).
