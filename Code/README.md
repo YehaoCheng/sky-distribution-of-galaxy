@@ -5,33 +5,43 @@ A complete open-source Python pipeline for calculating integrated stellar mass a
 
 ## Overview
 This repository contains all scripts to process galaxy catalog data, including:
-1.  **Batch HEALPix map calculation**: All-sky maps of total stellar mass (MASS) and SFR, across multiple resolutions and luminosity distance thresholds
-2.  **Machine learning SFR prediction**: A CatBoost regression pipeline to predict `log(SFR)` from galaxy photometry, redshift and stellar mass
+1.  **Machine learning SFR prediction**: A CatBoost regression pipeline to predict `log(SFR)` from galaxy photometry, redshift and stellar mass
+2.  **Batch HEALPix map calculation**: All-sky maps of total stellar mass (MASS) and SFR, across multiple resolutions and luminosity distance thresholds
 3.  **Publication-ready visualization**: Tools to plot Mollweide-projection sky maps of derived quantities
 
 ---
 
 ## Repository Structure
-Code/
-├── README.md # This file (project overview)
-├── requirements.txt # Python dependency list
-├── healpy_MASS.ipynb # Batch HEALPix stellar mass map calculation
-├── healpy_SFR.ipynb # Batch HEALPix star formation rate (SFR) map calculation
-├── ML_predict.ipynb # CatBoost-based SFR prediction pipeline
-└── Ploting.ipynb # Batch visualization for MASS/SFR HEALPix maps
+- Code
+  - README.md           # This file (project overview)
+  - requirements.txt    # Python dependency list
+  - healpy_MASS.ipynb   # Batch HEALPix stellar mass map calculation
+  - healpy_SFR.ipynb    # Batch HEALPix SFR map calculation
+  - ML_predict.ipynb    # CatBoost-based SFR prediction pipeline
+  - Ploting.ipynb       # Batch visualization for MASS/SFR HEALPix maps
 
-### Usage: 
-In the document, we have provided sky distribution maps and corresponding data of stellar mass and SFR for multiple angular resolutions at each luminosity distance. The top-level folders are named according to the angular resolution of the grids. We can choose the appropriate angular resolution based on the telescope's Field of View. Both the MASS and SFR folders contain data and figures of the sky distribution based on equatorial coordinates. The data is stored in the NumPy binary format (`.npz`).
+## Pipeline Workflow
+The pipeline runs in 3 sequential stages, ordered by data dependency:
 
-Filename example: `MASS/SFR_D30_1.83deg.npz`
+### Stage 1: Machine Learning SFR Prediction
+Use `ML_predict.ipynb` to train and validate a CatBoost regression model, and predict `log(SFR)` for galaxies lacking pre-existing measurements.
+- **Input**: Cleaned galaxy catalog with photometry, redshift, stellar mass, and observed `logSFR` labels
+- **Workflow**: Data cleaning → feature engineering → train/validation split → 10-fold cross-validation → blind test evaluation → prediction for unlabeled galaxies
+- **Output**: Complete galaxy catalog with predicted `logSFR` values, ready for map calculation
 
-- `D30`: Luminosity distance of 30 Mpc.
+### Stage 2: Batch HEALPix Map Calculation
+Use `healpy_MASS.ipynb` and `healpy_SFR.ipynb` to compute all-sky maps of integrated stellar mass and SFR, using the full catalog from Stage 1.
+- **Input**: Full galaxy catalog (required columns: `ra`, `dec`, `D`, `logM`, `logSFR` (observed + predicted))
+- **Customizable parameters**:
+  - `TARGET_NSIDES`: List of HEALPix resolutions to compute (e.g. `[4, 8, 16]`)
+  - `DISTANCE_RANGE`: Luminosity distance thresholds (Mpc) to process (default: 10–200 Mpc, step 10)
+  - File paths: Update input/output directories to match your environment
+- **Output**: HEALPix maps saved to `mapdate/MASS/` and `mapdate/SFR/` (NPZ binary format)
 
-- `1.83deg`: Angular resolution of the grid.
-
-Below is a code snippet to read this file format:
-
-
+### Stage 3: Publication-Ready Visualization
+Use `Ploting.ipynb` to generate high-resolution all-sky plots from the HEALPix maps produced in Stage 2.
+- **Input**: NPZ map files from Stage 2
+- **Output**: Mollweide-projection sky maps saved to `results/figure/` (PDF format)
 
 ---
 
