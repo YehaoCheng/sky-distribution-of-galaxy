@@ -9,6 +9,17 @@ In this project, we utilize the comprehensive galaxy catalog from [Tranin et al.
       - data / figures
       
 The data in each "data" folder represents the sky distribution of stellar mass and SFR. The corresponding sky distribution maps are located in the "figures" folder.
+
+The data is stored in the NumPy binary format (`.npz`).
+
+Filename example: `MASS/SFR_D30_1.83deg.npz`
+
+- `D30`: Luminosity distance of 30 Mpc.
+
+- `1.83deg`: Angular resolution of the grid.
+
+Below is a code snippet to read this file format:
+
 **Note:** The value in the grid is set to `1e-10` if no galaxy is located within it.
 
   
