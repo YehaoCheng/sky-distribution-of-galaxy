@@ -7,7 +7,7 @@ In this project, we utilize the comprehensive galaxy catalog from [Tranin et al.
 - xx deg / arcmin
     - MASS / SFR
       - data / figures
-      - 
+      
 The data in each "data" folder represents the sky distribution of stellar mass and SFR. The corresponding sky distribution maps are located in the "figures" folder.
 
   
