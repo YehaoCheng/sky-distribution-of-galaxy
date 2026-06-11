@@ -32,7 +32,7 @@ Filename example: `MASS/SFR_D30_1.83deg.npz`
 Below is a code snippet to read this file format:
 
 
-**Note:** The value in the grid is set to `1e-10` if no galaxy is located within it.
+
 ---
 
 ## Requirements
