@@ -1,7 +1,15 @@
 # A Roadmap for Transient Hunters: Mapping Stellar Mass and Star Formation Rate Anisotropies in the Local Universe
 
+
 ## Description: 
 In this project, we utilize the comprehensive galaxy catalog from [Tranin et al. (2026)](#ref-tranin2026) (REGALADE) to map the sky distributions of stellar mass and star formation rate (SFR) across various luminosity distance thresholds and angular grid resolutions. Following the methodology of [Zeraatgari et al. (2024)](#ref-zeraatgari2024), we employ a machine learning framework to predict the SFRs for galaxies lacking pre-existing measurements, enabling a complete and high-resolution mapping on the celestial sphere.
+
+## Data Availability
+To ensure long-term preservation and accommodate large file sizes, the materials for this project are distributed between GitHub and Zenodo:
+
+- **GitHub (This Repository)**: Contains the machine learning source code (Jupyter Notebooks), the aggregated sky distribution data (`.npz` files), and the corresponding sky map figures.
+- **Zenodo Archive**: Contains the large tabular datasets, including the filtered REGALADE base catalog, the machine learning training/validation sets (cross-matched with GSWLC-2), and the final catalog with our predicted SFRs. 
+  - **Download the full tabular datasets here:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20695048.svg)](https://doi.org/10.5281/zenodo.20695048)
 
 ## Repository Structure
 - xx deg / arcmin
