@@ -7802,7 +7802,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Batch-Galaxy-Stellar-Mass-Map-Calculation-with-HEALPix">Batch Galaxy Stellar Mass Map Calculation with HEALPix<a class="anchor-link" href="#Batch-Galaxy-Stellar-Mass-Map-Calculation-with-HEALPix">¶</a></h1><p>This notebook contains the complete, reproducible pipeline for calculating and exporting integrated galaxy stellar mass maps. It filters a local universe galaxy catalog across multiple distance thresholds ($10 \text{ to } 200 \text{ Mpc}$) and projects the data onto a spherical HEALPix grid over various angular resolutions ($\text{NSIDE} = 1 \text{ to } 256$).</p>
+<h1 id="Batch-Galaxy-Stellar-Mass-Map-Calculation-with-HEALPix">Batch Galaxy Stellar Mass Map Calculation with HEALPix<a class="anchor-link" href="#Batch-Galaxy-Stellar-Mass-Map-Calculation-with-HEALPix">¶</a></h1><p>This notebook contains the complete, reproducible pipeline for calculating and exporting integrated galaxy stellar mass maps. It filters a local universe galaxy catalog across multiple distance thresholds ($30 \text{ to } 200 \text{ Mpc}$) and projects the data onto a spherical HEALPix grid over various angular resolutions ($\text{NSIDE} = 1 \text{ to } 256$).</p>
 <h2 id="Computational-Environment-&amp;-Dependencies">Computational Environment &amp; Dependencies<a class="anchor-link" href="#Computational-Environment-&amp;-Dependencies">¶</a></h2><p>To ensure absolute scientific reproducibility, this notebook requires specific astronomical coordinate transformation libraries alongside standard data science packages. The exact versions used during development are pinned in the root directory's <code>requirements.txt</code>.</p>
 <h3 id="Core-Astronomical-&amp;-Numerical-Packages:">Core Astronomical &amp; Numerical Packages:<a class="anchor-link" href="#Core-Astronomical-&amp;-Numerical-Packages:">¶</a></h3><ul>
 <li><strong>Python Version:</strong> <code>3.10</code> or higher (recommended)</li>
@@ -8090,14 +8090,14 @@ Completed | NSIDE=  2 | Res=29.3deg      | Dist=200 Mpc | Valid Galaxies=364148
 Completed | NSIDE=  4 | Res=14.7deg      | Dist= 30 Mpc | Valid Galaxies=  7789
 Completed | NSIDE=  4 | Res=14.7deg      | Dist= 40 Mpc | Valid Galaxies= 11424
 Completed | NSIDE=  4 | Res=14.7deg      | Dist= 50 Mpc | Valid Galaxies= 15798
+Completed | NSIDE=  4 | Res=14.7deg      | Dist= 60 Mpc | Valid Galaxies= 21791
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Completed | NSIDE=  4 | Res=14.7deg      | Dist= 60 Mpc | Valid Galaxies= 21791
-Completed | NSIDE=  4 | Res=14.7deg      | Dist= 70 Mpc | Valid Galaxies= 29983
+<pre>Completed | NSIDE=  4 | Res=14.7deg      | Dist= 70 Mpc | Valid Galaxies= 29983
 Completed | NSIDE=  4 | Res=14.7deg      | Dist= 80 Mpc | Valid Galaxies= 39687
 Completed | NSIDE=  4 | Res=14.7deg      | Dist= 90 Mpc | Valid Galaxies= 50268
 Completed | NSIDE=  4 | Res=14.7deg      | Dist=100 Mpc | Valid Galaxies= 64427
@@ -8129,14 +8129,14 @@ Completed | NSIDE=  8 | Res=7.33deg      | Dist=150 Mpc | Valid Galaxies=178960
 Completed | NSIDE=  8 | Res=7.33deg      | Dist=160 Mpc | Valid Galaxies=210105
 Completed | NSIDE=  8 | Res=7.33deg      | Dist=170 Mpc | Valid Galaxies=244264
 Completed | NSIDE=  8 | Res=7.33deg      | Dist=180 Mpc | Valid Galaxies=282168
+Completed | NSIDE=  8 | Res=7.33deg      | Dist=190 Mpc | Valid Galaxies=321868
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Completed | NSIDE=  8 | Res=7.33deg      | Dist=190 Mpc | Valid Galaxies=321868
-Completed | NSIDE=  8 | Res=7.33deg      | Dist=200 Mpc | Valid Galaxies=364148
+<pre>Completed | NSIDE=  8 | Res=7.33deg      | Dist=200 Mpc | Valid Galaxies=364148
 
 ----- Processing NSIDE = 16 (Resolution: 3.66deg) -----
 Completed | NSIDE= 16 | Res=3.66deg      | Dist= 30 Mpc | Valid Galaxies=  7789
@@ -8173,15 +8173,15 @@ Completed | NSIDE= 32 | Res=1.83deg      | Dist=130 Mpc | Valid Galaxies=122776
 Completed | NSIDE= 32 | Res=1.83deg      | Dist=140 Mpc | Valid Galaxies=149966
 Completed | NSIDE= 32 | Res=1.83deg      | Dist=150 Mpc | Valid Galaxies=178960
 Completed | NSIDE= 32 | Res=1.83deg      | Dist=160 Mpc | Valid Galaxies=210105
+Completed | NSIDE= 32 | Res=1.83deg      | Dist=170 Mpc | Valid Galaxies=244264
+Completed | NSIDE= 32 | Res=1.83deg      | Dist=180 Mpc | Valid Galaxies=282168
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Completed | NSIDE= 32 | Res=1.83deg      | Dist=170 Mpc | Valid Galaxies=244264
-Completed | NSIDE= 32 | Res=1.83deg      | Dist=180 Mpc | Valid Galaxies=282168
-Completed | NSIDE= 32 | Res=1.83deg      | Dist=190 Mpc | Valid Galaxies=321868
+<pre>Completed | NSIDE= 32 | Res=1.83deg      | Dist=190 Mpc | Valid Galaxies=321868
 Completed | NSIDE= 32 | Res=1.83deg      | Dist=200 Mpc | Valid Galaxies=364148
 
 ----- Processing NSIDE = 64 (Resolution: 55arcmin) -----
@@ -8209,17 +8209,17 @@ Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 30 Mpc | Valid Galaxies=  7789
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 40 Mpc | Valid Galaxies= 11424
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 50 Mpc | Valid Galaxies= 15798
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 60 Mpc | Valid Galaxies= 21791
+Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 70 Mpc | Valid Galaxies= 29983
+Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 80 Mpc | Valid Galaxies= 39687
+Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 90 Mpc | Valid Galaxies= 50268
+Completed | NSIDE=128 | Res=27.5arcmin   | Dist=100 Mpc | Valid Galaxies= 64427
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 70 Mpc | Valid Galaxies= 29983
-Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 80 Mpc | Valid Galaxies= 39687
-Completed | NSIDE=128 | Res=27.5arcmin   | Dist= 90 Mpc | Valid Galaxies= 50268
-Completed | NSIDE=128 | Res=27.5arcmin   | Dist=100 Mpc | Valid Galaxies= 64427
-Completed | NSIDE=128 | Res=27.5arcmin   | Dist=110 Mpc | Valid Galaxies= 81488
+<pre>Completed | NSIDE=128 | Res=27.5arcmin   | Dist=110 Mpc | Valid Galaxies= 81488
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=120 Mpc | Valid Galaxies= 99502
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=130 Mpc | Valid Galaxies=122776
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=140 Mpc | Valid Galaxies=149966

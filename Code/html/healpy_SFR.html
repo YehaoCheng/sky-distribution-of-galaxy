@@ -7802,7 +7802,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Batch-Star-Formation-Rate-(SFR)-Map-Calculation-with-HEALPix">Batch Star Formation Rate (SFR) Map Calculation with HEALPix<a class="anchor-link" href="#Batch-Star-Formation-Rate-(SFR)-Map-Calculation-with-HEALPix">¶</a></h1><p>This notebook contains the complete, reproducible pipeline for calculating and exporting integrated galaxy Star Formation Rate (SFR) maps on the celestial sphere. It filters the local universe galaxy catalog across multiple distance thresholds ($10 \text{ to } 200 \text{ Mpc}$) and projects the integrated SFR onto a spherical HEALPix grid over various angular resolutions ($\text{NSIDE} = 1 \text{ to } 256$).</p>
+<h1 id="Batch-Star-Formation-Rate-(SFR)-Map-Calculation-with-HEALPix">Batch Star Formation Rate (SFR) Map Calculation with HEALPix<a class="anchor-link" href="#Batch-Star-Formation-Rate-(SFR)-Map-Calculation-with-HEALPix">¶</a></h1><p>This notebook contains the complete, reproducible pipeline for calculating and exporting integrated galaxy Star Formation Rate (SFR) maps on the celestial sphere. It filters the local universe galaxy catalog across multiple distance thresholds ($30 \text{ to } 200 \text{ Mpc}$) and projects the integrated SFR onto a spherical HEALPix grid over various angular resolutions ($\text{NSIDE} = 1 \text{ to } 256$).</p>
 <h2 id="Computational-Environment-&amp;-Dependencies">Computational Environment &amp; Dependencies<a class="anchor-link" href="#Computational-Environment-&amp;-Dependencies">¶</a></h2><p>To ensure absolute scientific reproducibility, this notebook requires specific astronomical coordinate transformation libraries alongside standard data science packages. The exact versions used during development are pinned in the root directory's <code>requirements.txt</code>.</p>
 <h3 id="Core-Astronomical-&amp;-Numerical-Packages:">Core Astronomical &amp; Numerical Packages:<a class="anchor-link" href="#Core-Astronomical-&amp;-Numerical-Packages:">¶</a></h3><ul>
 <li><strong>Python Version:</strong> <code>3.10</code> or higher (recommended)</li>
@@ -7830,7 +7830,7 @@ a.anchor-link {
 <span class="sd">Workflow:</span>
 <span class="sd">    1. Load galaxy catalog (read once for efficiency)</span>
 <span class="sd">    2. Iterate over multiple HEALPix resolutions (NSIDE)</span>
-<span class="sd">    3. Iterate over distance thresholds (10 ~ 200 Mpc, step = 10)</span>
+<span class="sd">    3. Iterate over distance thresholds (30 ~ 200 Mpc, step = 10)</span>
 <span class="sd">    4. Compute total SFR per HEALPix pixel</span>
 <span class="sd">    5. Save results to TXT and NPZ files automatically</span>
 
@@ -8135,14 +8135,14 @@ Completed | NSIDE= 16 | Res=3.66deg      | Dist= 80 Mpc | Galaxies= 39687
 Completed | NSIDE= 16 | Res=3.66deg      | Dist= 90 Mpc | Galaxies= 50268
 Completed | NSIDE= 16 | Res=3.66deg      | Dist=100 Mpc | Galaxies= 64427
 Completed | NSIDE= 16 | Res=3.66deg      | Dist=110 Mpc | Galaxies= 81488
+Completed | NSIDE= 16 | Res=3.66deg      | Dist=120 Mpc | Galaxies= 99502
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Completed | NSIDE= 16 | Res=3.66deg      | Dist=120 Mpc | Galaxies= 99502
-Completed | NSIDE= 16 | Res=3.66deg      | Dist=130 Mpc | Galaxies=122776
+<pre>Completed | NSIDE= 16 | Res=3.66deg      | Dist=130 Mpc | Galaxies=122776
 Completed | NSIDE= 16 | Res=3.66deg      | Dist=140 Mpc | Galaxies=149966
 Completed | NSIDE= 16 | Res=3.66deg      | Dist=150 Mpc | Galaxies=178960
 Completed | NSIDE= 16 | Res=3.66deg      | Dist=160 Mpc | Galaxies=210105
@@ -8175,15 +8175,15 @@ Completed | NSIDE= 32 | Res=1.83deg      | Dist=200 Mpc | Galaxies=364148
 Completed | NSIDE= 64 | Res=55arcmin     | Dist= 30 Mpc | Galaxies=  7789
 Completed | NSIDE= 64 | Res=55arcmin     | Dist= 40 Mpc | Galaxies= 11424
 Completed | NSIDE= 64 | Res=55arcmin     | Dist= 50 Mpc | Galaxies= 15798
+Completed | NSIDE= 64 | Res=55arcmin     | Dist= 60 Mpc | Galaxies= 21791
+Completed | NSIDE= 64 | Res=55arcmin     | Dist= 70 Mpc | Galaxies= 29983
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Completed | NSIDE= 64 | Res=55arcmin     | Dist= 60 Mpc | Galaxies= 21791
-Completed | NSIDE= 64 | Res=55arcmin     | Dist= 70 Mpc | Galaxies= 29983
-Completed | NSIDE= 64 | Res=55arcmin     | Dist= 80 Mpc | Galaxies= 39687
+<pre>Completed | NSIDE= 64 | Res=55arcmin     | Dist= 80 Mpc | Galaxies= 39687
 Completed | NSIDE= 64 | Res=55arcmin     | Dist= 90 Mpc | Galaxies= 50268
 Completed | NSIDE= 64 | Res=55arcmin     | Dist=100 Mpc | Galaxies= 64427
 Completed | NSIDE= 64 | Res=55arcmin     | Dist=110 Mpc | Galaxies= 81488
@@ -8209,14 +8209,14 @@ Completed | NSIDE=128 | Res=27.5arcmin   | Dist=100 Mpc | Galaxies= 64427
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=110 Mpc | Galaxies= 81488
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=120 Mpc | Galaxies= 99502
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=130 Mpc | Galaxies=122776
+Completed | NSIDE=128 | Res=27.5arcmin   | Dist=140 Mpc | Galaxies=149966
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Completed | NSIDE=128 | Res=27.5arcmin   | Dist=140 Mpc | Galaxies=149966
-Completed | NSIDE=128 | Res=27.5arcmin   | Dist=150 Mpc | Galaxies=178960
+<pre>Completed | NSIDE=128 | Res=27.5arcmin   | Dist=150 Mpc | Galaxies=178960
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=160 Mpc | Galaxies=210105
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=170 Mpc | Galaxies=244264
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=180 Mpc | Galaxies=282168
