@@ -31,7 +31,7 @@ Use `ML_predict.ipynb` to train and validate a CatBoost regression model, and pr
 
 ### Stage 2: Batch HEALPix Map Calculation
 Use `healpy_MASS.ipynb` and `healpy_SFR.ipynb` to compute all-sky maps of integrated stellar mass and SFR, using the full catalog from Stage 1.
-- **Input**: Full galaxy catalog (required columns: `ra`, `dec`, `D`, `logM`, `logSFR` (observed + predicted))
+- **Input**: Full galaxy catalog (required columns: `ra`, `dec`, `dL/Mpc`, `logM`, `logSFR` (observed + predicted))
 - **Customizable parameters**:
   - `TARGET_NSIDES`: List of HEALPix resolutions to compute (e.g. `[4, 8, 16]`)
   - `DISTANCE_RANGE`: Luminosity distance thresholds (Mpc) to process (default: 10–200 Mpc, step 10)
