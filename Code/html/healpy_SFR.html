@@ -7905,7 +7905,7 @@ a.anchor-link {
 <span class="sd">    Files are saved to: {BASE_OUTPUT_DIR}/{theta_label}/</span>
 <span class="sd">    """</span>
     <span class="c1"># Step 1: Filter galaxies by distance</span>
-    <span class="n">dist_mask</span> <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="s2">"D"</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">distance_cut</span>
+    <span class="n">dist_mask</span> <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="s2">"dL/Mpc"</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">distance_cut</span>
     <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="n">dist_mask</span><span class="p">]</span>
 
     <span class="n">ra_arr</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="s2">"ra"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -8209,14 +8209,14 @@ Completed | NSIDE=128 | Res=27.5arcmin   | Dist=100 Mpc | Galaxies= 64427
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=110 Mpc | Galaxies= 81488
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=120 Mpc | Galaxies= 99502
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=130 Mpc | Galaxies=122776
-Completed | NSIDE=128 | Res=27.5arcmin   | Dist=140 Mpc | Galaxies=149966
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Completed | NSIDE=128 | Res=27.5arcmin   | Dist=150 Mpc | Galaxies=178960
+<pre>Completed | NSIDE=128 | Res=27.5arcmin   | Dist=140 Mpc | Galaxies=149966
+Completed | NSIDE=128 | Res=27.5arcmin   | Dist=150 Mpc | Galaxies=178960
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=160 Mpc | Galaxies=210105
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=170 Mpc | Galaxies=244264
 Completed | NSIDE=128 | Res=27.5arcmin   | Dist=180 Mpc | Galaxies=282168
