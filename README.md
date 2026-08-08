@@ -5,7 +5,7 @@
 In this project, we utilize the comprehensive galaxy catalog from [Tranin et al. (2026)](#ref-tranin2026) (REGALADE) to map the sky distributions of stellar mass and star formation rate (SFR) across various luminosity distance thresholds and angular grid resolutions. Following the methodology of [Zeraatgari et al. (2024)](#ref-zeraatgari2024), we employ a machine learning framework to predict the SFRs for galaxies lacking pre-existing measurements, enabling a complete and high-resolution mapping on the celestial sphere.
 
 ## Data Availability
-To ensure long-term preservation and accommodate large file sizes, the materials for this project are distributed between GitHub and Zenodo:
+To ensure long-term preservation and accommodate large file sizes, the materials for this project are distributed between GitHub:
 
 - **GitHub (This Repository)**: Contains the machine learning source code (Jupyter Notebooks), the aggregated sky distribution data (`.npz` files), and the corresponding sky map figures.
 
